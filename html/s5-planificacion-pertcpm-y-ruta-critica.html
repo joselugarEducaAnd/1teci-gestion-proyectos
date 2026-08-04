@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" id="exe-20260803232121PAGE04">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S5 · Planificación: PERT/CPM y ruta crítica | Gestión y desarrollo de proyectos</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<meta name="description" content="Gestión y desarrollo de proyectos">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script>window.exeXapi={"odeId":"20260803232121QMDELPX","packageTitle":"Gestión y desarrollo de proyectos","language":"es"};</script><script src="../libs/xapi/exe_xapi.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<script src="../idevices/quick-questions/quick-questions.js"></script><link rel="stylesheet" href="../idevices/quick-questions/quick-questions.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css"><link rel="stylesheet" href="../theme/zzz-majuelo.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#20260803232121PAGE04" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Bienvenida</a>
+</li>
+<li> <a href="../html/s1-tecnologia-proyectos-y-equipo.html" class="no-ch">S1 · Tecnología, proyectos y equipo</a>
+</li>
+<li> <a href="../html/s2-el-ciclo-idi-y-la-definicion-del-reto.html" class="no-ch">S2 · El ciclo I+D+i y la definición del reto</a>
+</li>
+<li> <a href="../html/s3-design-thinking-idear-la-solucion.html" class="no-ch">S3 · Design Thinking: idear la solución</a>
+</li>
+<li> <a href="../html/s4-planificacion-diagrama-de-gantt.html" class="no-ch">S4 · Planificación: diagrama de Gantt</a>
+</li>
+<li class="active"> <a href="../html/s5-planificacion-pertcpm-y-ruta-critica.html" class="active no-ch">S5 · Planificación: PERT/CPM y ruta crítica</a>
+</li>
+<li> <a href="../html/s6-scrum-el-equipo-y-sus-artefactos.html" class="no-ch">S6 · Scrum: el equipo y sus artefactos</a>
+</li>
+<li> <a href="../html/s7-scrum-el-sprint-en-marcha.html" class="no-ch">S7 · Scrum: el sprint en marcha</a>
+</li>
+<li> <a href="../html/s8-kanban-y-lean.html" class="no-ch">S8 · Kanban y Lean</a>
+</li>
+<li> <a href="../html/s9-cierre-y-presentacion-del-plan.html" class="no-ch">S9 · Cierre y presentación del plan</a>
+</li>
+</ul>
+</nav><main id="20260803232121PAGE04" class="page"> 
+<header class="main-header">
+<div class="package-header"><p class="package-title">Gestión y desarrollo de proyectos</p></div>
+<div class="page-header"><h1 class="page-title">S5 · Planificación: PERT/CPM y ruta crítica</h1></div>
+</header><div id="page-content-20260803232121PAGE04" class="page-content">
+<article id="20260803232121BLK004" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Contenido</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="20260803232121IDEV004" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;20260803232121IDEV004&quot;}">
+<style>.exe-content{--chrome:#3b3a7a;--chrome-osc:#2a295a;--chrome-tinte:#ecebf5;--chrome-linea:#d0cfe6;}</style>
+<div class="exe-text"><section class="level2" id="qué-añade-pertcpm-al-gantt">
+<h2 class="">Qué añade PERT/CPM al Gantt</h2>
+<p>El Gantt muestra <em>cuándo</em> ocurre cada tarea, pero no deja ver con claridad <strong>qué tareas no pueden retrasarse</strong> sin retrasar todo el proyecto. Para eso usamos <strong>PERT/CPM</strong>, una técnica que representa el proyecto como una <strong>red de actividades</strong> y calcula la <strong>ruta crítica</strong>.</p>
+<ul>
+<li><strong>PERT</strong> (Program Evaluation and Review Technique): modela las relaciones entre tareas.</li>
+<li><strong>CPM</strong> (Critical Path Method): calcula el <strong>camino crítico</strong>, la secuencia de tareas más larga, que determina la <strong>duración mínima</strong> del proyecto.</li>
+</ul>
+<div class="marco marco-teoria"><p class="marco-titulo">¿No bastaba con el Gantt?</p>
+<p>En proyectos <strong>pequeños</strong>, como los ejemplos que has visto, la ruta crítica casi se ve a ojo en el Gantt. El problema llega cuando hay <strong>muchas tareas con dependencias cruzadas</strong>: ahí ya no se puede «ver a ojo» cuál es la cadena más larga. PERT/CPM permite <strong>calcular</strong> de forma exacta la ruta crítica y la <strong>holgura de cada tarea</strong> (un número concreto de días), algo que el Gantt no te da directamente.</p>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><p style="text-align:center"><img alt="Red PERT/CPM actividad-en-nodo: del círculo de Inicio sale A; de A salen B y C en paralelo; ambas llegan a D y D al círculo de Fin. La ruta crítica A-B-D va en rojo y C, con dos días de holgura, en azul" src="../content/resources/diagrama-s4-pert-cpm-1.svg" style="max-width:100%;height:auto"/></p><p></p>
+</div>
+</div>
+</div>
+</section>
+<section class="level2" id="cómo-se-lee-la-red">
+<h2 class="">Cómo se lee la red</h2>
+<ul>
+<li><strong>Rectángulos (nodos):</strong> cada uno es una <strong>actividad o tarea</strong>, con su nombre y su <strong>duración</strong>.</li>
+<li><strong>Flechas:</strong> indican las <strong>dependencias</strong> (precedencia): la actividad de la que sale debe terminar antes de que empiece la siguiente.</li>
+<li><strong>Círculos de Inicio y Fin:</strong> marcan el <strong>principio y el final</strong> del proyecto.</li>
+<li><strong>En rojo:</strong> las actividades de la <strong>ruta crítica</strong> (las que no tienen holgura).</li>
+</ul>
+<div class="marco marco-teoria"><p class="marco-titulo">Nota</p>
+<p>Esta es la forma <strong>actividad‑en‑nodo</strong> (la tarea va dentro del rectángulo), la más sencilla y la que usaremos. Quizá veas en otros sitios la forma clásica <strong>actividad‑en‑flecha</strong>, donde las <strong>flechas</strong> son las actividades y los <strong>círculos</strong> son <em>sucesos</em> (instantes) numerados: es lo mismo representado al revés.</p>
+</div>
+</section>
+<section class="level2" id="conceptos-clave">
+<h2 class="">Conceptos clave</h2>
+<ul>
+<li><strong>Camino:</strong> cualquier secuencia de tareas desde el inicio hasta el fin.</li>
+<li><strong>Duración de un camino:</strong> suma de las duraciones de sus tareas.</li>
+<li><strong>Ruta crítica:</strong> el camino <strong>más largo</strong>. Sus tareas son <strong>críticas</strong>: si una se retrasa, el proyecto entero se retrasa.</li>
+<li><strong>Holgura:</strong> margen que tiene una tarea <strong>no crítica</strong> para retrasarse sin afectar al final.</li>
+</ul>
+</section>
+<section class="level2" id="ejemplo-resuelto">
+<h2 class="">Ejemplo resuelto</h2>
+<p>Con la red de arriba hay dos caminos:</p>
+<ul>
+<li><strong>A → B → D</strong> = 3 + 4 + 3 = <strong>10 días</strong></li>
+<li>A → C → D = 3 + 2 + 3 = 8 días</li>
+</ul>
+<p>La <strong>ruta crítica</strong> es <strong>A → B → D</strong> (10 días): es la duración mínima del proyecto. La tarea <strong>C</strong> tiene una <strong>holgura</strong> de 10 − 8 = <strong>2 días</strong> (puede empezar hasta 2 días más tarde sin retrasar el proyecto).</p>
+<div class="marco marco-teoria"><p class="marco-titulo">Idea para recordar</p>
+<p>La ruta crítica te dice <strong>dónde poner la atención</strong>: en esas tareas no hay margen. En las tareas con holgura sí puedes reorganizar recursos si surge un imprevisto.</p>
+</div>
+</section>
+<section class="level2" id="tarea-evaluable-red-pertcpm-con-herramienta-digital">
+<h2 class="">Tarea evaluable — Red PERT/CPM con herramienta digital</h2>
+<div class="marco marco-formula"><p class="marco-titulo">Documentación técnica: red PERT/CPM</p>
+<p style="margin:0 0 .55em 0"><span style="display:inline-block;background:#2c6fb0;color:#ffffff;font-weight:bold;font-size:.75em;letter-spacing:.06em;padding:.2em .8em;border-radius:999px">TRABAJO INDIVIDUAL</span> <span style="font-size:.88em;color:#444444">cada persona entrega el suyo</span></p>
+<p>Esta tarea <strong>se evalúa</strong> como documentación técnica (igual que el Gantt de la sesión anterior). Trabaja con el <strong>mismo proyecto</strong>, la <em>estación meteorológica</em>:</p>
+<table class="caption-top table tabla-datos">
+<thead>
+<tr class="header">
+<th>Tarea</th>
+<th style="text-align: center;">Duración (días laborables)</th>
+<th style="text-align: center;">Depende de</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A Definir requisitos</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td>B Conseguir materiales</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="odd">
+<td>C Diseñar el soporte</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr class="even">
+<td>D Montar el circuito</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr class="odd">
+<td>E Fabricar el soporte</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr class="even">
+<td>F Integrar y probar</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">D y E</td>
+</tr>
+<tr class="odd">
+<td>G Documentar y presentar</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Qué tienes que hacer:</strong></p>
+<ol type="1">
+<li>Dibuja la <strong>red PERT/CPM</strong> (nodos = tareas, flechas = dependencias) en <strong><a href="https://app.diagrams.net/" rel="noopener" target="_blank">diagrams.net</a></strong> (online, <strong>sin instalar nada y sin cuenta</strong>).</li>
+<li>Calcula la <strong>duración de cada camino</strong> y señala la <strong>ruta crítica</strong>.</li>
+<li>Indica la <strong>holgura</strong> de las tareas no críticas.</li>
+<li>Exporta el diagrama a <strong>PNG</strong> y súbelo a la tarea <strong>Red PERT/CPM</strong> de Moodle: <strong>esa entrega es individual y es la que se evalúa</strong>. Añade además una copia a la <strong>plantilla del plan de proyecto</strong> (enlace en la portada).</li>
+</ol>
+</div>
+</section>
+<section class="level2" id="ejercicios">
+<h2 class="">Ejercicios</h2>
+<div class="marco marco-teoria"><p class="marco-titulo">Recuerda</p>
+<p style="margin:0 0 .55em 0"><span style="display:inline-block;background:#2c6fb0;color:#ffffff;font-weight:bold;font-size:.75em;letter-spacing:.06em;padding:.2em .8em;border-radius:999px">TRABAJO INDIVIDUAL</span> <span style="font-size:.88em;color:#444444">cada persona entrega el suyo</span></p>
+<p>Resuelve primero en el cuaderno y luego <strong>pasa tus respuestas a tu copia de la plantilla</strong> en Drive (la que creaste desde <a href="{{context_path}}#index">la portada</a>). Al terminar la unidad, <strong>descarga la plantilla en PDF</strong> (Archivo → Descargar → Documento PDF) y súbelo a la tarea <strong>Ejercicios de la unidad</strong> de Moodle. La tarea está abierta desde la primera sesión, pero <strong>no pulses «Entregar» hasta la última</strong>: es un solo documento con los ejercicios de las nueve.</p>
+</div>
+<ol type="1">
+<li>En el ejemplo, si la tarea B pasara a durar 6 días, ¿cuál sería la nueva ruta crítica y la duración del proyecto?</li>
+<li>¿Puede un proyecto tener <strong>dos</strong> rutas críticas a la vez? Razónalo.</li>
+<li>Calcula la holgura de la tarea C si D pasara a durar 5 días.</li>
+</ol>
+</section></div>
+</div>
+</div>
+</article><article id="block-1785797499378-8k9bvkqrn" class="box">
+<header class="box-head no-icon">
+<h1 class="box-title">Test</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1785797498945-tt0zuuqi5" class="idevice_node quick-questions" data-idevice-path="../idevices/quick-questions/" data-idevice-type="quick-questions">
+<div class="quext-IDevice"><div class="game-evaluation-ids js-hidden" data-id="idevice-1785797498945-tt0zuuqi5" data-evaluationb="false" data-evaluationid="ba045cdc-0c42-4929-9f1a-60ed64d395a5"></div><div class="quext-instructions QXTP-instructions"><p>Trabaja sobre la red del ejemplo resuelto: <strong>A → B → D = 10 días</strong> y <strong>A → C → D = 8 días</strong>.</p></div><div class="quext-version js-hidden">2</div><div class="quext-feedback-game"></div><div class="quext-DataGame js-hidden">%E9%B0%F3%E1%FB%F5%FC%F3%E6%E7%E0%F3%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%E6%FA%FD%E0%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%E6%FA%FD%E0%C4%FB%F6%F7%FD%B0%A8%B2%B0%B0%BE%B2%B0%E6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B2%B0%C3%E7%D7%EA%E6%B0%BE%B2%B0%F7%FC%F6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%FB%F6%C4%FB%F6%F7%FD%B0%A8%B2%B0%B0%BE%B2%B0%E1%E6%F3%E0%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%D7%EA%F7%B0%A8%B2%B0%B7%A1%D1%E2%B7%A1%D7%D7%FE%FB%F5%F7%B7%A0%A2%FE%F3%B7%A0%A2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B7%A0%A2%F1%FD%E0%E0%F7%F1%E6%F3%B7%A1%D1%BD%E2%B7%A1%D7%B0%BE%B2%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%B0%A8%B2%B0%C6%E0%F3%F0%F3%F8%F3%B2%E1%FD%F0%E0%F7%B2%FE%F3%B2%E0%F7%F6%B2%F6%F7%FE%B2%F7%F8%F7%FF%E2%FE%FD%B2%E0%F7%E1%E7%F7%FE%E6%FD%A8%B2%D3%B2%u2100%B2%D0%B2%u2100%B2%D6%B2%AF%B2%A3%A2%B2%F6%7F%F3%E1%B2%EB%B2%D3%B2%u2100%B2%D1%B2%u2100%B2%D6%B2%AF%B2%AA%B2%F6%7F%F3%E1%BC%B0%BE%B2%B0%E1%FA%FD%E5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%FD%E2%E6%FB%FD%FC%E1%C0%F3%FF%F6%FD%FC%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%F3%FC%E1%E5%F7%E0%E1%C0%F3%FF%F6%FD%FC%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%E1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%E6%FB%FF%F7%C1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%A1%BE%B2%B0%E7%E1%F7%DE%FB%E4%F7%E1%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%FC%E7%FF%F0%F7%E0%DE%FB%E4%F7%E1%B0%A8%B2%A1%BE%B2%B0%FB%E6%FB%FC%F7%E0%F3%E0%EB%B0%A8%B2%E9%B0%E1%FA%FD%E5%D1%FE%E7%F7%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%F1%FE%E7%F7%D5%F3%FF%F7%B0%A8%B2%B0%B0%BE%B2%B0%E2%F7%E0%F1%F7%FC%E6%F3%F5%F7%D1%FE%E7%F7%B0%A8%B2%A6%A2%BE%B2%B0%E1%FA%FD%E5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%F1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B2%B0%B0%BE%B2%B0%FF%F7%E1%E1%F3%F5%F7%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B2%B0%B0%EF%BE%B2%B0%E3%E7%F7%E1%E6%FB%FD%FC%E1%D5%F3%FF%F7%B0%A8%B2%C9%E9%B0%E6%EB%E2%F7%B0%A8%B2%A2%BE%B2%B0%E6%FB%FF%F7%B0%A8%B2%A2%BE%B2%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%B2%A1%BE%B2%B0%EA%B0%A8%B2%A2%BE%B2%B0%EB%B0%A8%B2%A2%BE%B2%B0%F3%E7%E6%FA%FD%E0%B0%A8%B2%B0%B0%BE%B2%B0%F3%FE%E6%B0%A8%B2%B0%B0%BE%B2%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%B2%A3%BE%B2%B0%E7%E0%FE%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%F6%FB%FD%B0%A8%B2%B0%B0%BE%B2%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F4%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F7%C6%F7%EA%E6%B0%A8%B2%B0%B0%BE%B2%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B2%B0-%D1%E7s%FE%B2%F7%E1%B2%FE%F3%B2%F6%E7%E0%F3%F1%FBa%FC%B2%FF%7F%FC%FB%FF%F3%B2%F6%F7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%AD%B0%BE%B2%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%B2%C9%B0%AA%B2%F6%7F%F3%E1%B0%BE%B2%B0%A3%A2%B2%F6%7F%F3%E1%B0%BE%B2%B0%A3%AA%B2%F6%7F%F3%E1%B0%CF%BE%B2%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%A3%BE%B2%B0%FF%E1%F5%DA%FB%E6%B0%A8%B2%B0%D7%E1%FD%B2%F7%E1%A8%B2%FE%F3%B2%FF%F3%E0%F1%F3%B2%F7%FE%B2%F1%F3%FF%FB%FC%FD%B2%FFs%E1%B2%FE%F3%E0%F5%FD%BC%B0%BE%B2%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B2%B0%DE%FD%E1%B2%F1%F3%FF%FB%FC%FD%E1%B2%FC%FD%B2%E1%F7%B2%E1%E7%FF%F3%FC%A8%B2%F3%E4%F3%FC%E8%F3%FC%B2%F3%B2%FE%F3%B2%E4%F7%E8%BC%B2%D7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%B2%F6%E7%E0%F3%B2%FE%FD%B2%E3%E7%F7%B2%F6%E7%E0%F3%B2%FE%F3%B2%F1%F3%F6%F7%FC%F3%B2%FFs%E1%B2%FE%F3%E0%F5%F3%BC%B0%EF%BE%B2%E9%B0%E6%EB%E2%F7%B0%A8%B2%A2%BE%B2%B0%E6%FB%FF%F7%B0%A8%B2%A2%BE%B2%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%B2%A1%BE%B2%B0%EA%B0%A8%B2%A2%BE%B2%B0%EB%B0%A8%B2%A2%BE%B2%B0%F3%E7%E6%FA%FD%E0%B0%A8%B2%B0%B0%BE%B2%B0%F3%FE%E6%B0%A8%B2%B0%B0%BE%B2%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%B2%A3%BE%B2%B0%E7%E0%FE%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%F6%FB%FD%B0%A8%B2%B0%B0%BE%B2%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F4%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F7%C6%F7%EA%E6%B0%A8%B2%B0%B0%BE%B2%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B2%B0-%D1%E7s%FC%E6%F3%B2%FA%FD%FE%F5%E7%E0%F3%B2%E6%FB%F7%FC%F7%B2%FE%F3%B2%E6%F3%E0%F7%F3%B2%D1%AD%B0%BE%B2%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%B2%C9%B0%A2%B2%F6%7F%F3%E1%B0%BE%B2%B0%A0%B2%F6%7F%F3%E1%B0%BE%B2%B0%AA%B2%F6%7F%F3%E1%B0%CF%BE%B2%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%A3%BE%B2%B0%FF%E1%F5%DA%FB%E6%B0%A8%B2%B0%D1%FD%E0%E0%F7%F1%E6%FD%A8%B2%A3%A2%B2%u2280%B2%AA%B2%AF%B2%A0%B2%F6%7F%F3%E1%B2%F6%F7%B2%FF%F3%E0%F5%F7%FC%BC%B0%BE%B2%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B2%B0%DE%F3%B2%FA%FD%FE%F5%E7%E0%F3%B2%F6%F7%B2%E7%FC%F3%B2%E6%F3%E0%F7%F3%B2%FC%FD%B2%F1%E0%7F%E6%FB%F1%F3%B2%F7%E1%B2%FE%F3%B2%F6%FB%F4%F7%E0%F7%FC%F1%FB%F3%B2%F7%FC%E6%E0%F7%B2%FE%F3%B2%E0%E7%E6%F3%B2%F1%E0%7F%E6%FB%F1%F3%B2%EB%B2%E1%E7%B2%E2%E0%FD%E2%FB%FD%B2%F1%F3%FF%FB%FC%FD%A8%B2%A3%A2%B2%u2280%B2%AA%BC%B0%EF%BE%B2%E9%B0%E6%EB%E2%F7%B0%A8%B2%A2%BE%B2%B0%E6%FB%FF%F7%B0%A8%B2%A2%BE%B2%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%B2%A1%BE%B2%B0%EA%B0%A8%B2%A2%BE%B2%B0%EB%B0%A8%B2%A2%BE%B2%B0%F3%E7%E6%FA%FD%E0%B0%A8%B2%B0%B0%BE%B2%B0%F3%FE%E6%B0%A8%B2%B0%B0%BE%B2%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%B2%A3%BE%B2%B0%E7%E0%FE%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%F6%FB%FD%B0%A8%B2%B0%B0%BE%B2%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F4%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F7%C6%F7%EA%E6%B0%A8%B2%B0%B0%BE%B2%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B2%B0%C1%FB%B2%FE%F3%B2%E6%F3%E0%F7%F3%B2%D0%B2%E2%F3%E1%F3%E0%F3%B2%F3%B2%F6%E7%E0%F3%E0%B2%A4%B2%F6%7F%F3%E1%B2%F7%FC%B2%E4%F7%E8%B2%F6%F7%B2%A6%BE%B2-%E3%E7%7B%B2%FD%F1%E7%E0%E0%FB%E0%7F%F3%AD%B0%BE%B2%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%B2%C9%B0%DE%F3%B2%E0%E7%E6%F3%B2%F1%E0%7F%E6%FB%F1%F3%B2%E2%F3%E1%F3%E0%7F%F3%B2%F3%B2%E1%F7%E0%B2%D3%B2%u2100%B2%D1%B2%u2100%B2%D6%B0%BE%B2%B0%D7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%B2%F6%E7%E0%F3%E0%7F%F3%B2%A3%A0%B2%F6%7F%F3%E1%B2%E2%FD%E0%B2%F7%FE%B2%FF%FB%E1%FF%FD%B2%F1%F3%FF%FB%FC%FD%B2%D3%B2%u2100%B2%D0%B2%u2100%B2%D6%B0%BE%B2%B0%DC%FD%B2%F1%F3%FF%F0%FB%F3%E0%7F%F3%B2%FC%F3%F6%F3%B0%CF%BE%B2%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%A3%BE%B2%B0%FF%E1%F5%DA%FB%E6%B0%A8%B2%B0%C1%7F%A8%B2%D3%B2%u2100%B2%D0%B2%u2100%B2%D6%B2%E2%F3%E1%F3%B2%F3%B2%A3%A0%B2%F6%7F%F3%E1%B2%EB%B2%E1%FB%F5%E7%F7%B2%E1%FB%F7%FC%F6%FD%B2%F7%FE%B2%F1%F3%FF%FB%FC%FD%B2%FFs%E1%B2%FE%F3%E0%F5%FD%BC%B0%BE%B2%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B2%B0%C0%F7%F1%F3%FE%F1%E7%FE%F3%B2%FE%FD%E1%B2%F6%FD%E1%B2%F1%F3%FF%FB%FC%FD%E1%B2%F1%FD%FC%B2%FE%F3%B2%F6%E7%E0%F3%F1%FBa%FC%B2%FC%E7%F7%E4%F3%A8%B2%D3%B2%u2100%B2%D0%B2%u2100%B2%D6%B2%AF%B2%A1%B2%B9%B2%A4%B2%B9%B2%A1%B2%EB%B2%D3%B2%u2100%B2%D1%B2%u2100%B2%D6%B2%AF%B2%A1%B2%B9%B2%A0%B2%B9%B2%A1%BC%B2-%D1%E7s%FE%B2%F7%E1%B2%FF%F3%EB%FD%E0%AD%B0%EF%BE%B2%E9%B0%E6%EB%E2%F7%B0%A8%B2%A2%BE%B2%B0%E6%FB%FF%F7%B0%A8%B2%A2%BE%B2%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%B2%A1%BE%B2%B0%EA%B0%A8%B2%A2%BE%B2%B0%EB%B0%A8%B2%A2%BE%B2%B0%F3%E7%E6%FA%FD%E0%B0%A8%B2%B0%B0%BE%B2%B0%F3%FE%E6%B0%A8%B2%B0%B0%BE%B2%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%B2%A3%BE%B2%B0%E7%E0%FE%B0%A8%B2%B0%B0%BE%B2%B0%F3%E7%F6%FB%FD%B0%A8%B2%B0%B0%BE%B2%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%B2%A3%BE%B2%B0%FB%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F4%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%B2%A2%BE%B2%B0%F7%C6%F7%EA%E6%B0%A8%B2%B0%B0%BE%B2%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B2%B0-%C3%E7%7B%B2%F3c%F3%F6%F7%B2%C2%D7%C0%C6%BD%D1%C2%DF%B2%E3%E7%F7%B2%F7%FE%B2%D5%F3%FC%E6%E6%B2%FC%FD%B2%F6%F3%B2%F6%FB%E0%F7%F1%E6%F3%FF%F7%FC%E6%F7%AD%B0%BE%B2%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%B2%C9%B0%D7%FE%B2%F1s%FE%F1%E7%FE%FD%B2%F7%EA%F3%F1%E6%FD%B2%F6%F7%B2%FE%F3%B2%E0%E7%E6%F3%B2%F1%E0%7F%E6%FB%F1%F3%B2%EB%B2%F6%F7%B2%FE%F3%B2%FA%FD%FE%F5%E7%E0%F3%B2%F6%F7%B2%F1%F3%F6%F3%B2%E6%F3%E0%F7%F3%B0%BE%B2%B0%DE%F3%E1%B2%F4%F7%F1%FA%F3%E1%B2%F6%F7%B2%FB%FC%FB%F1%FB%FD%B2%EB%B2%F4%FB%FC%B2%F6%F7%B2%F1%F3%F6%F3%B2%E6%F3%E0%F7%F3%B0%BE%B2%B0%D7%FE%B2%E0%F7%E2%F3%E0%E6%FD%B2%F6%F7%B2%E0%F7%E1%E2%FD%FC%E1%F3%F0%FE%F7%E1%B0%CF%BE%B2%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%B2%A2%BE%B2%B0%FF%E1%F5%DA%FB%E6%B0%A8%B2%B0%D8%E7%E1%E6%FD%A8%B2%F7%FE%B2%D5%F3%FC%E6%E6%B2%F7%FC%E1%F7c%F3%B2%F1%E7s%FC%F6%FD%B2%E2%F3%E1%F3%B2%F1%F3%F6%F3%B2%F1%FD%E1%F3%A9%B2%C2%D7%C0%C6%BD%D1%C2%DF%B2%F1%F3%FE%F1%E7%FE%F3%B2%FE%FD%E1%B2%FCh%FF%F7%E0%FD%E1%BC%B0%BE%B2%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B2%B0%DE%F3%E1%B2%F4%F7%F1%FA%F3%E1%B2%EB%B2%FE%FD%E1%B2%E0%F7%E1%E2%FD%FC%E1%F3%F0%FE%F7%E1%B2%EB%F3%B2%FE%FD%E1%B2%F6%F3%B2%F7%FE%B2%D5%F3%FC%E6%E6%BC%B2%DE%FD%B2%E3%E7%F7%B2%FC%FD%B2%E6%F7%B2%F6%F3%B2%F7%E1%B2%F7%FE%B2%FCh%FF%F7%E0%FD%B2%F7%EA%F3%F1%E6%FD%B2%F6%F7%B2%FE%F3%B2%FA%FD%FE%F5%E7%E0%F3%B2%FC%FB%B2%F7%FE%B2%F1s%FE%F1%E7%FE%FD%B2%F6%F7%B2%FE%F3%B2%E0%E7%E6%F3%B2%F1%E0%7F%E6%FB%F1%F3%BC%B0%EF%CF%BE%B2%B0%FB%E1%C1%F1%FD%E0%FF%B0%A8%B2%A2%BE%B2%B0%E6%F7%EA%E6%D0%E7%E6%E6%FD%FC%C1%F1%FD%E0%FF%B0%A8%B2%B0%D5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B2%B0%E0%F7%E2%F7%F3%E6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%E5%F7%FB%F5%FA%E6%F7%F6%B0%A8%B2%A3%A2%A2%BE%B2%B0%E6%FB%E6%FE%F7%B0%A8%B2%B0%B0%BE%B2%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%E6%F7%EA%E6%D3%F4%E6%F7%E0%B0%A8%B2%B0%B0%BE%B2%B0%E6%F7%EA%E6%D4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B2%B0%B0%BE%B2%B0%F5%F3%FF%F7%DF%FD%F6%F7%B0%A8%B2%A3%BE%B2%B0%F4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%D4%D0%B0%A8%B2%A3%A2%A2%BE%B2%B0%E4%F7%E0%E1%FB%FD%FC%B0%A8%B2%A0%BE%B2%B0%F1%E7%E1%E6%FD%FF%DF%F7%E1%E1%F3%F5%F7%E1%B0%A8%B2%E6%E0%E7%F7%BE%B2%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B2%A3%A2%A2%BE%B2%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%B0%A8%B2%F4%F3%FE%E1%F7%BE%B2%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%DB%D6%B0%A8%B2%B0%F0%F3%A2%A6%A7%F1%F6%F1%BF%A2%F1%A6%A0%BF%A6%AB%A0%AB%BF%AB%F4%A3%F3%BF%A4%A2%F7%F6%A4%A6%F6%A1%AB%A7%F3%A7%B0%BE%B2%B0%F5%FE%FD%F0%F3%FE%C6%FB%FF%F7%B0%A8%B2%A2%BE%B2%B0%FB%F6%B0%A8%B2%B0%FB%F6%F7%E4%FB%F1%F7%BF%A3%A5%AA%A7%A5%AB%A5%A6%AB%AA%AB%A6%A7%BF%E6%E6%A2%E8%E7%E7%E3%FB%A7%B0%BE%B2%B0%FF%E1%F5%E1%B0%A8%B2%E9%B0%FF%E1%F5%C1%E6%F3%E0%E6%D5%F3%FF%F7%B0%A8%B2%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B0%BE%B2%B0%FF%E1%F5%C1%E7%F0%FF%FB%E6%B0%A8%B2%B0%D7%FC%E4%FB%F3%E0%B0%BE%B2%B0%FF%E1%F5%D1%FE%E7%F7%B0%A8%B2%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%E2%FB%E1%E6%F3%B2%F7%E1%A8%B0%BE%B2%B0%FF%E1%F5%DC%F7%E5%D5%F3%FF%F7%B0%A8%B2%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B2%FD%E6%E0%F3%B2%E2%F3%E0%E6%FB%F6%F3%B0%BE%B2%B0%FF%E1%F5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B2%B0%D1a%F6%FB%F5%FD%B2%F6%F7%B2%F3%F1%F1%F7%E1%FD%B0%BE%B2%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%DE%FD%FD%F9%FB%FC%F5%B0%A8%B2%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%F7%E1%E6%F3%F0%F3%B2%F0%E7%E1%F1%F3%FC%F6%FD%B0%BE%B2%B0%FF%E1%F5%C2%FE%F3%EB%C1%E6%F3%E0%E6%B0%A8%B2%B0%C2%E7%FE%E1%F3%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F8%E7%F5%F3%E0%B0%BE%B2%B0%FF%E1%F5%D7%E0%E0%FD%E0%E1%B0%A8%B2%B0%D7%E0%E0%FD%E0%F7%E1%B0%BE%B2%B0%FF%E1%F5%DA%FB%E6%E1%B0%A8%B2%B0%D3%F1%FB%F7%E0%E6%FD%E1%B0%BE%B2%B0%FF%E1%F5%C1%F1%FD%E0%F7%B0%A8%B2%B0%C2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B2%B0%FF%E1%F5%C5%F7%FB%F5%FA%E6%B0%A8%B2%B0%C2%F7%E1%FD%B0%BE%B2%B0%FF%E1%F5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B2%B0%DF%FB%FC%FB%FF%FB%E8%F3%E0%B0%BE%B2%B0%FF%E1%F5%DF%F3%EA%FB%FF%FB%E8%F7%B0%A8%B2%B0%DF%F3%EA%FB%FF%FB%E8%F3%E0%B0%BE%B2%B0%FF%E1%F5%C6%FB%FF%F7%B0%A8%B2%B0%C6%FB%F7%FF%E2%FD%B2%E2%FD%E0%B2%E2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B2%B0%FF%E1%F5%DE%FB%E4%F7%B0%A8%B2%B0%C4%FB%F6%F3%B0%BE%B2%B0%FF%E1%F5%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B2%B0%C2%F3%FC%E6%F3%FE%FE%F3%B2%D1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B2%B0%FF%E1%F5%D7%EA%FB%E6%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B2%B0%C1%F3%FE%FB%E0%B2%F6%F7%FE%B2%FF%FD%F6%FD%B2%E2%F3%FC%E6%F3%FE%FE%F3%B2%F1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B2%B0%FF%E1%F5%DC%E7%FF%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B2%B0%DCh%FF%F7%E0%FD%B2%F6%F7%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B0%BE%B2%B0%FF%E1%F5%DC%FD%DB%FF%F3%F5%F7%B0%A8%B2%B0%C2%E0%F7%F5%E7%FC%E6%F3%B2%E1%FB%FC%B2%FB%FFs%F5%F7%FC%F7%E1%B0%BE%B2%B0%FF%E1%F5%D1%FD%FD%FE%B0%A8%B2%B03%D0%FB%F7%FC%B3%B0%BE%B2%B0%FF%E1%F5%DE%FD%E1%F7%C6%B0%A8%B2%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%A1%A1%A2%B2%E2%E7%FC%E6%FD%E1%B0%BE%B2%B0%FF%E1%F5%DE%FD%E1%F7%DE%FB%E4%F7%B0%A8%B2%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E7%FC%F3%B2%E4%FB%F6%F3%B0%BE%B2%B0%FF%E1%F5%DE%FD%E1%E6%DE%FB%E4%F7%E1%B0%A8%B2%B03%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E6%FD%F6%F3%E1%B2%E1%E7%E1%B2%E4%FB%F6%F3%E1%B3%B0%BE%B2%B0%FF%E1%F5%D3%FE%FE%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B2%B03%D1%FD%FF%E2%FE%F7%E6%F3%F6%F3%E1%B2%FE%F3%E1%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B3%B0%BE%B2%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F7%E1%B0%A8%B2%B03%D1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%D7%EA%F1%F7%FE%F7%FC%E6%F7%B3%B2%EE%B23%D5%F7%FC%FB%F3%FE%B3%B2%EE%B23%DF%E7%EB%B2%F0%FB%F7%FC%B3%B2%EE%B23%C2%F7%E0%F4%F7%F1%E6%FD%B3%B0%BE%B2%B0%FF%E1%F5%D4%F3%FB%FE%E7%E0%F7%E1%B0%A8%B2%B03%DC%FD%B2%F7%E0%F3%B2%F7%E1%FD%B3%B2%EE%B23%DB%FC%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DC%FD%B2%F7%E1%B2%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DE%FD%B2%E1%F7%FC%E6%FB%FF%FD%E1%B3%B2%EE%B23%D7%E0%E0%FD%E0%B3%B0%BE%B2%B0%FF%E1%F5%C1%F1%FD%E0%F7%C1%F1%FD%E0%FF%B0%A8%B2%B0%DE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E2%FD%E0%E3%E7%F7%B2%F7%E1%E6%F3%B2%E2s%F5%FB%FC%F3%B2%FC%FD%B2%F4%FD%E0%FF%F3%B2%E2%F3%E0%E6%F7%B2%B2%F6%F7%B2%E7%FC%B2%E2%F3%E3%E7%F7%E6%F7%B2%C1%D1%DD%C0%DF%BC%B0%BE%B2%B0%FF%E1%F5%C3%E7%F7%E1%E6%FB%FD%FC%B0%A8%B2%B0%C2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B2%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%C1%F1%FD%E0%F7%B0%A8%B2%B03%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E7%FC%F3%B2%E4%F7%E8%B3%B0%BE%B2%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%B0%A8%B2%B0%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%B0%BE%B2%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B2%B0%DB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B0%BE%B2%B0%FF%E1%F5%D3%E7%E6%FA%FD%E0%B0%A8%B2%B0%D3%E7%E6%FD%E0%7F%F3%B0%BE%B2%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B2%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B2%C1%FD%FE%FD%B2%E2%E7%F7%F6%F7%B2%F8%E7%F5%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%BC%B0%BE%B2%B0%FF%E1%F5%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B2%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F3%E7%E6%FD%FFs%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B0%BE%B2%B0%FF%E1%F5%CB%FD%E7%C1%F1%FD%E0%F7%B0%A8%B2%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B2%B0%FF%E1%F5%C1%F7%E4%F7%E0%F3%FE%C1%F1%FD%E0%F7%B0%A8%B2%B0%C2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E6%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%F1%FD%FF%FD%B2%E3%E7%FB%F7%E0%F3%B0%BE%B2%B0%FF%E1%F5%CB%FD%E7%DE%F3%E1%E6%C1%F1%FD%E0%F7%B0%A8%B2%B0%DE%F3%B2h%FE%E6%FB%FF%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%F5%E7%F3%E0%F6%F3%F6%F3%B2%F7%E1%B0%BE%B2%B0%FF%E1%F5%D3%F1%E6%FB%E6%EB%D1%FD%FF%E2%FE%EB%B0%A8%B2%B0%CB%F3%B2%FA%F3%B2%E0%F7%F3%FE%FB%E8%F3%F6%FD%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%BC%B0%BE%B2%B0%FF%E1%F5%C2%FE%F3%EB%C1%F7%E4%F7%E0%F3%FE%C6%FB%FF%F7%E1%B0%A8%B2%B0%C2%E7%F7%F6%F7%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%B2%F1%E7%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%E3%E7%FB%F7%E0%F3%B0%BE%B2%B0%FF%E1%F5%C6%E0%EB%D3%F5%F3%FB%FC%B0%A8%B2%B0%DC%F7%F1%F7%E1%FB%E6%F3%E1%B2%F3%FE%B2%FF%F7%FC%FD%E1%B2%B7%E1%B7%B2%F6%F7%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%E1%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B2%E2%F3%E0%F3%B2%FD%F0%E6%F7%FC%F7%E0%B2%FE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%BC%B2%DB%FC%E6%7B%FC%E6%F3%FE%FD%B2%F6%F7%B2%FC%E7%F7%E4%FD%BC%B0%BE%B2%B0%FF%E1%F5%C4%FB%F6%F7%FD%DB%FC%E6%E0%FD%B0%A8%B2%B0%C4%7F%F6%F7%FD%B2%F6%F7%B2%FB%FC%E6%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B2%B0%FF%E1%F5%D1%FE%FD%E1%F7%B0%A8%B2%B0%D1%F7%E0%E0%F3%E0%B0%BE%B2%B0%FF%E1%F5%DD%E2%E6%FB%FD%FC%B0%A8%B2%B0%DD%E2%F1%FBa%FC%B0%BE%B2%B0%FF%E1%F5%C7%E1%F7%D4%E7%FE%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B2%B0%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%E1%F7%E0s%B2%FF%E7%EB%B2h%E6%FB%FE%B0%BE%B2%B0%FF%E1%F5%DE%FD%F3%F6%FB%FC%F5%B0%A8%B2%B0%D1%F3%E0%F5%F3%FC%F6%FD%BC%B2%D7%E1%E2%F7%E0%F7%BE%B2%E2%FD%E0%B2%F4%F3%E4%FD%E0%BC%BC%BC%B0%BE%B2%B0%FF%E1%F5%C2%FD%FB%FC%E6%E1%B0%A8%B2%B0%E2%E7%FC%E6%FD%E1%B0%BE%B2%B0%FF%E1%F5%D3%E7%F6%FB%FD%B0%A8%B2%B0%D3%E7%F6%FB%FD%B0%BE%B2%B0%FF%E1%F5%D7%FC%F6%D5%F3%FF%F7%C1%F1%FD%E0%F7%B0%A8%B2%B0%DB%FC%FB%F1%FB%F3%B2%F7%FE%B2%F8%E7%F7%F5%FD%BC%BC%BC%B0%BE%B2%B0%FF%E1%F5%C7%FC%F1%FD%FF%E2%FE%F7%E6%F7%F6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B2%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%F3%B0%BE%B2%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B2%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B2%B0%FF%E1%F5%C7%FC%E1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B2%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B2%B0%FF%E1%F5%C6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B2%B0%C2%E0%F7%F5%E7%FC%E6%F3%E1%B2%E0s%E2%FB%F6%F3%E1%B0%EF%EF</div><div class="quext-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/s4-planificacion-diagrama-de-gantt.html" title="Anterior" class="nav-button nav-button-left"><span>Anterior</span></a>
+<a href="../html/s6-scrum-el-equipo-y-sus-artefactos.html" title="Siguiente" class="nav-button nav-button-right"><span>Siguiente</span></a>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"></div></footer>
+</div>
+<p id="made-with-eXe"> <a href="https://exelearning.net/" target="_blank" rel="noopener"> <span>Creado con eXeLearning <span>(Ventana nueva)</span></span></a></p>
+</body>
+</html>

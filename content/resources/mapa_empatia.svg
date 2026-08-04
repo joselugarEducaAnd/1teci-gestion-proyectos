@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Mapa de empatía: un usuario en el centro rodeado por cuatro cuadrantes con preguntas. Dice: qué cuenta en voz alta. Piensa: qué le preocupa de verdad aunque no lo diga. Hace: qué acciones realiza. Siente: qué emociones, miedos e ilusiones tiene.">
+  <!-- DICE (arriba izq, morado) -->
+  <rect x="24" y="36" width="310" height="190" rx="16" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M24,52 a16,16 0 0 1 16,-16 h278 a16,16 0 0 1 16,16 v26 h-310 z" fill="#453f93"/>
+  <text x="179" y="71" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">DICE</text>
+  <text x="179" y="114" text-anchor="middle" fill="#1d2444" font-size="14.5">¿Qué cuenta en voz alta?</text>
+  <text x="179" y="139" text-anchor="middle" fill="#1d2444" font-size="14.5">Sus frases textuales,</text>
+  <text x="179" y="162" text-anchor="middle" fill="#1d2444" font-size="14.5">lo que pide o se queja.</text>
+  <text x="179" y="200" text-anchor="middle" fill="#6b6890" font-size="12.5" font-style="italic">«Nunca encuentro un sitio para…»</text>
+
+  <!-- PIENSA (arriba der, morado oscuro) -->
+  <rect x="426" y="36" width="310" height="190" rx="16" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M426,52 a16,16 0 0 1 16,-16 h278 a16,16 0 0 1 16,16 v26 h-310 z" fill="#322d6e"/>
+  <text x="581" y="71" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">PIENSA</text>
+  <text x="581" y="114" text-anchor="middle" fill="#1d2444" font-size="14.5">¿Qué le preocupa de verdad?</text>
+  <text x="581" y="139" text-anchor="middle" fill="#1d2444" font-size="14.5">Lo que no dice en voz alta:</text>
+  <text x="581" y="162" text-anchor="middle" fill="#1d2444" font-size="14.5">dudas, prioridades.</text>
+  <text x="581" y="200" text-anchor="middle" fill="#6b6890" font-size="12.5" font-style="italic">«¿Y si me equivoco delante de todos?»</text>
+
+  <!-- HACE (abajo izq, verde) -->
+  <rect x="24" y="334" width="310" height="190" rx="16" fill="#ffffff" stroke="#2f6328" stroke-width="2"/>
+  <path d="M24,350 a16,16 0 0 1 16,-16 h278 a16,16 0 0 1 16,16 v26 h-310 z" fill="#4f8f43"/>
+  <text x="179" y="369" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">HACE</text>
+  <text x="179" y="412" text-anchor="middle" fill="#1d2444" font-size="14.5">¿Qué acciones realiza?</text>
+  <text x="179" y="437" text-anchor="middle" fill="#1d2444" font-size="14.5">Su comportamiento</text>
+  <text x="179" y="460" text-anchor="middle" fill="#1d2444" font-size="14.5">observable, sus hábitos.</text>
+  <text x="179" y="498" text-anchor="middle" fill="#6b6890" font-size="12.5" font-style="italic">«Da vueltas buscando y se rinde.»</text>
+
+  <!-- SIENTE (abajo der, naranja) -->
+  <rect x="426" y="334" width="310" height="190" rx="16" fill="#ffffff" stroke="#a8551c" stroke-width="2"/>
+  <path d="M426,350 a16,16 0 0 1 16,-16 h278 a16,16 0 0 1 16,16 v26 h-310 z" fill="#d2722a"/>
+  <text x="581" y="369" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">SIENTE</text>
+  <text x="581" y="412" text-anchor="middle" fill="#1d2444" font-size="14.5">¿Qué emociones tiene?</text>
+  <text x="581" y="437" text-anchor="middle" fill="#1d2444" font-size="14.5">Miedos, frustraciones</text>
+  <text x="581" y="460" text-anchor="middle" fill="#1d2444" font-size="14.5">e ilusiones.</text>
+  <text x="581" y="498" text-anchor="middle" fill="#6b6890" font-size="12.5" font-style="italic">«Frustración, pero ganas de que salga.»</text>
+
+  <!-- Usuario en el centro (gap libre) -->
+  <circle cx="380" cy="280" r="42" fill="#453f93" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="380" cy="268" r="13" fill="#ffffff"/>
+  <path d="M357,302 a23,16 0 0 1 46,0 z" fill="#ffffff"/>
+</svg>

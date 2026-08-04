@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Cuatro roles del equipo de proyecto, cada uno con su responsabilidad. Coordinación: organiza el trabajo y vigila los plazos. Documentación: mantiene al día el plan y el diario de equipo. Diseño: lidera la ideación y los prototipos. Comunicación: prepara y da la presentación. Los roles pueden rotar.">
+  <!-- Coordinación -->
+  <rect x="24" y="40" width="220" height="220" rx="16" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M24,56 a16,16 0 0 1 16,-16 h188 a16,16 0 0 1 16,16 v40 h-220 z" fill="#453f93"/>
+  <text x="134" y="73" text-anchor="middle" fill="#ffffff" font-size="16.5" font-weight="bold">Coordinación</text>
+  <text x="134" y="92" text-anchor="middle" fill="#d6d4ee" font-size="12.5">quién organiza</text>
+  <text x="134" y="136" text-anchor="middle" fill="#1d2444" font-size="14">Organiza el trabajo,</text>
+  <text x="134" y="160" text-anchor="middle" fill="#1d2444" font-size="14">vigila los plazos y</text>
+  <text x="134" y="184" text-anchor="middle" fill="#1d2444" font-size="14">convoca y modera</text>
+  <text x="134" y="208" text-anchor="middle" fill="#1d2444" font-size="14">las reuniones breves.</text>
+
+  <!-- Documentación -->
+  <rect x="268" y="40" width="220" height="220" rx="16" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M268,56 a16,16 0 0 1 16,-16 h188 a16,16 0 0 1 16,16 v40 h-220 z" fill="#453f93"/>
+  <text x="378" y="73" text-anchor="middle" fill="#ffffff" font-size="16.5" font-weight="bold">Documentación</text>
+  <text x="378" y="92" text-anchor="middle" fill="#d6d4ee" font-size="12.5">quién deja registro</text>
+  <text x="378" y="136" text-anchor="middle" fill="#1d2444" font-size="14">Mantiene al día el</text>
+  <text x="378" y="160" text-anchor="middle" fill="#1d2444" font-size="14">plan de proyecto y</text>
+  <text x="378" y="184" text-anchor="middle" fill="#1d2444" font-size="14">el diario de equipo</text>
+  <text x="378" y="208" text-anchor="middle" fill="#1d2444" font-size="14">(acuerdos y reparto).</text>
+
+  <!-- Diseño -->
+  <rect x="512" y="40" width="220" height="220" rx="16" fill="#ffffff" stroke="#2f6328" stroke-width="2"/>
+  <path d="M512,56 a16,16 0 0 1 16,-16 h188 a16,16 0 0 1 16,16 v40 h-220 z" fill="#4f8f43"/>
+  <text x="622" y="73" text-anchor="middle" fill="#ffffff" font-size="16.5" font-weight="bold">Diseño</text>
+  <text x="622" y="92" text-anchor="middle" fill="#dcecd6" font-size="12.5">quién idea y prototipa</text>
+  <text x="622" y="136" text-anchor="middle" fill="#1d2444" font-size="14">Lidera la ideación</text>
+  <text x="622" y="160" text-anchor="middle" fill="#1d2444" font-size="14">y los prototipos de</text>
+  <text x="622" y="184" text-anchor="middle" fill="#1d2444" font-size="14">la solución, con todo</text>
+  <text x="622" y="208" text-anchor="middle" fill="#1d2444" font-size="14">el equipo.</text>
+
+  <!-- Comunicación -->
+  <rect x="756" y="40" width="220" height="220" rx="16" fill="#ffffff" stroke="#a8551c" stroke-width="2"/>
+  <path d="M756,56 a16,16 0 0 1 16,-16 h188 a16,16 0 0 1 16,16 v40 h-220 z" fill="#d2722a"/>
+  <text x="866" y="73" text-anchor="middle" fill="#ffffff" font-size="16.5" font-weight="bold">Comunicación</text>
+  <text x="866" y="92" text-anchor="middle" fill="#f6e0cf" font-size="12.5">quién cuenta el proyecto</text>
+  <text x="866" y="136" text-anchor="middle" fill="#1d2444" font-size="14">Prepara la</text>
+  <text x="866" y="160" text-anchor="middle" fill="#1d2444" font-size="14">presentación y habla</text>
+  <text x="866" y="184" text-anchor="middle" fill="#1d2444" font-size="14">en nombre del equipo</text>
+  <text x="866" y="208" text-anchor="middle" fill="#1d2444" font-size="14">ante la clase.</text>
+
+  <!-- Nota inferior -->
+  <rect x="24" y="288" width="952" height="48" rx="12" fill="#efeefa" stroke="#453f93" stroke-width="1.5"/>
+  <text x="500" y="318" text-anchor="middle" fill="#322d6e" font-size="14.5" font-weight="bold">Los roles pueden rotar: así todas las personas pasan por todas las tareas y nadie queda al margen.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="El error como aprendizaje, en un bucle de cuatro pasos que se repite: pruebo mi prototipo, algo no funciona y es un error, aprendo qué ha fallado y mejoro la idea para volver a probar. Cada vuelta mejora la solución.">
+  <defs>
+    <marker id="it" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc2a2a"/>
+    </marker>
+  </defs>
+
+  <!-- Flechas del bucle (rojas, sentido horario) -->
+  <path d="M468,86 C560,104 612,150 626,212" fill="none" stroke="#cc2a2a" stroke-width="5" marker-end="url(#it)"/>
+  <path d="M626,300 C612,362 560,408 470,426" fill="none" stroke="#cc2a2a" stroke-width="5" marker-end="url(#it)"/>
+  <path d="M252,426 C160,408 108,362 94,300" fill="none" stroke="#cc2a2a" stroke-width="5" marker-end="url(#it)"/>
+  <path d="M94,212 C108,150 160,104 250,86" fill="none" stroke="#cc2a2a" stroke-width="5" marker-end="url(#it)"/>
+
+  <!-- Centro -->
+  <circle cx="360" cy="256" r="74" fill="#453f93"/>
+  <text x="360" y="248" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">ITERAR</text>
+  <text x="360" y="274" text-anchor="middle" fill="#dcdaf0" font-size="13">cada error</text>
+  <text x="360" y="292" text-anchor="middle" fill="#dcdaf0" font-size="13">enseña algo</text>
+
+  <!-- Nodo 1 · Pruebo (arriba) -->
+  <rect x="262" y="36" width="196" height="60" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <text x="360" y="62" text-anchor="middle" fill="#322d6e" font-size="14" font-weight="bold">1 · Pruebo mi</text>
+  <text x="360" y="81" text-anchor="middle" fill="#322d6e" font-size="14" font-weight="bold">prototipo</text>
+
+  <!-- Nodo 2 · Error (derecha) -->
+  <rect x="520" y="226" width="184" height="60" rx="14" fill="#fdecea" stroke="#cc2a2a" stroke-width="2"/>
+  <text x="612" y="252" text-anchor="middle" fill="#a81f1f" font-size="14" font-weight="bold">2 · Algo no funciona</text>
+  <text x="612" y="271" text-anchor="middle" fill="#a81f1f" font-size="14" font-weight="bold">(el error)</text>
+
+  <!-- Nodo 3 · Aprendo (abajo) -->
+  <rect x="262" y="416" width="196" height="60" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <text x="360" y="442" text-anchor="middle" fill="#322d6e" font-size="14" font-weight="bold">3 · Aprendo qué</text>
+  <text x="360" y="461" text-anchor="middle" fill="#322d6e" font-size="14" font-weight="bold">ha fallado</text>
+
+  <!-- Nodo 4 · Mejoro (izquierda) -->
+  <rect x="16" y="226" width="184" height="60" rx="14" fill="#eef6ea" stroke="#4f8f43" stroke-width="2"/>
+  <text x="108" y="252" text-anchor="middle" fill="#2f6328" font-size="14" font-weight="bold">4 · Mejoro la idea</text>
+  <text x="108" y="271" text-anchor="middle" fill="#2f6328" font-size="14" font-weight="bold">y vuelvo a probar</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 360" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Los artefactos de Scrum: del product backlog se toma el sprint backlog y al final del sprint se obtiene el incremento.">
+  <defs>
+    <marker id="flecha2" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#453f93"/>
+    </marker>
+  </defs>
+
+  <!-- PRODUCT BACKLOG -->
+  <rect x="40" y="56" width="270" height="248" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M40,70 a14,14 0 0 1 14,-14 h242 a14,14 0 0 1 14,14 v34 h-270 z" fill="#453f93"/>
+  <text x="175" y="89" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">PRODUCT BACKLOG</text>
+  <text x="175" y="126" text-anchor="middle" fill="#666" font-size="12.5" font-style="italic">todo lo que hay que hacer (priorizado)</text>
+  <rect x="66" y="142" width="218" height="22" rx="5" fill="#453f93"/>
+  <rect x="66" y="172" width="218" height="22" rx="5" fill="#6f69b3"/>
+  <rect x="66" y="202" width="218" height="22" rx="5" fill="#9c98cf"/>
+  <rect x="66" y="232" width="218" height="22" rx="5" fill="#c2bfe2"/>
+  <rect x="66" y="262" width="218" height="22" rx="5" fill="#dcdaf0"/>
+
+  <!-- SPRINT BACKLOG -->
+  <rect x="390" y="92" width="250" height="176" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M390,106 a14,14 0 0 1 14,-14 h222 a14,14 0 0 1 14,14 v34 h-250 z" fill="#453f93"/>
+  <text x="515" y="125" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">SPRINT BACKLOG</text>
+  <text x="515" y="162" text-anchor="middle" fill="#666" font-size="12.5" font-style="italic">lo elegido para este sprint</text>
+  <rect x="416" y="178" width="198" height="22" rx="5" fill="#453f93"/>
+  <rect x="416" y="208" width="198" height="22" rx="5" fill="#6f69b3"/>
+  <rect x="416" y="238" width="198" height="22" rx="5" fill="#9c98cf"/>
+
+  <!-- INCREMENTO -->
+  <rect x="720" y="92" width="250" height="176" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M720,106 a14,14 0 0 1 14,-14 h222 a14,14 0 0 1 14,14 v34 h-250 z" fill="#453f93"/>
+  <text x="845" y="125" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">INCREMENTO</text>
+  <text x="845" y="162" text-anchor="middle" fill="#666" font-size="12.5" font-style="italic">producto utilizable</text>
+  <rect x="795" y="178" width="100" height="74" rx="10" fill="#d6dbf2" stroke="#453f93" stroke-width="2"/>
+  <path d="M812,216 l14,15 l28,-30" fill="none" stroke="#4f8f43" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Flechas -->
+  <path d="M316,180 L384,180" fill="none" stroke="#453f93" stroke-width="6" marker-end="url(#flecha2)"/>
+  <text x="350" y="168" text-anchor="middle" fill="#453f93" font-size="12" font-weight="bold">planifica</text>
+  <path d="M646,180 L714,180" fill="none" stroke="#453f93" stroke-width="6" marker-end="url(#flecha2)"/>
+  <text x="680" y="168" text-anchor="middle" fill="#453f93" font-size="12" font-weight="bold">sprint</text>
+</svg>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El límite WIP en un tablero Kanban</title>
+<style>
+/* ===========================================================
+   Widget manipulable · SdA 01 de 1.º TECI · sesión S8 (Kanban y Lean)
+   Autocontenido: sin CDN, sin dependencias, sin almacenamiento.
+   Estilo Majuelo · chrome Índigo de la unidad.
+   =========================================================== */
+:root{
+  --chrome:#3b3a7a; --chrome-osc:#2a295a;
+  --chrome-tinte:#ecebf5; --chrome-linea:#d0cfe6;
+  --pend:#8a8a8a;  --pend-bg:#f4f4f6;
+  --curso:#e67e22; --curso-bg:#fef6ec;
+  --hecho:#2a7d4f; --hecho-bg:#eef8f1;
+  --gris:#8a8a8a;  --txt:#222222;
+  --fuente:Verdana,'DejaVu Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--fuente); color:var(--txt); background:#fff;
+  font-size:13px; line-height:1.45; padding:10px 12px 12px; overflow-x:hidden;
+}
+h1{font-size:15px; color:var(--chrome); margin:0 0 2px; font-weight:700}
+.sub{font-size:11.5px; color:var(--gris); margin:0 0 8px}
+
+.tableros{display:flex; gap:10px; align-items:stretch}
+.tablero{
+  flex:1 1 0; min-width:0;
+  border:1px solid var(--chrome-linea); border-radius:6px; padding:6px 7px 7px;
+}
+.tablero.limitado{border-color:var(--chrome); box-shadow:inset 3px 0 0 0 var(--chrome)}
+.tablero h2{
+  font-size:11.5px; margin:0 0 5px; color:var(--chrome); font-weight:700;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.cols{display:flex; gap:5px}
+.col{flex:1 1 0; min-width:0}
+.col h3{
+  font-size:9.5px; margin:0 0 3px; color:var(--gris); font-weight:700;
+  text-transform:uppercase; letter-spacing:.02em; text-align:center;
+  border-bottom:1px solid var(--chrome-linea); padding-bottom:2px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+/* altura fija: los dos tableros quedan alineados pase lo que pase */
+.pila{height:158px; display:flex; flex-direction:column; gap:3px}
+
+.tarjeta{
+  border:1px solid var(--pend); border-left-width:4px; border-radius:3px;
+  background:var(--pend-bg); padding:2px 4px 3px; font-size:9.5px; line-height:1.2;
+}
+.tarjeta.curso{border-color:var(--curso); background:var(--curso-bg)}
+.tarjeta.hecho{border-color:var(--hecho); background:var(--hecho-bg)}
+.tarjeta .n{
+  display:flex; justify-content:space-between; gap:4px;
+  white-space:nowrap; overflow:hidden;
+}
+.tarjeta .n span{overflow:hidden; text-overflow:ellipsis}
+.tarjeta .n b{flex:0 0 auto; color:#666; font-weight:400}
+.tarjeta .bar{height:4px; background:#fff; border:1px solid #ddd; border-radius:2px; margin-top:2px}
+.tarjeta .bar i{display:block; height:100%; background:var(--curso)}
+.tarjeta.hecho .bar i{background:var(--hecho)}
+
+.marcador{
+  display:flex; gap:5px; margin-top:5px; font-size:10px;
+}
+.marcador span{
+  flex:1 1 0; border-radius:4px; padding:3px 5px; text-align:center;
+  border:1px solid var(--chrome-linea); background:var(--chrome-tinte);
+}
+.marcador b{display:block; font-size:15px; line-height:1.15}
+.marcador .ok b{color:var(--hecho)}
+.marcador .med b{color:var(--curso)}
+
+.ctrl{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:9px 0 0}
+button{
+  font-family:var(--fuente); font-size:12px; cursor:pointer;
+  border:1px solid var(--chrome); background:var(--chrome); color:#fff;
+  border-radius:5px; padding:4px 11px; min-height:28px;
+}
+button.sec{background:#fff; color:var(--chrome)}
+button:hover:not(:disabled){background:var(--chrome-osc); border-color:var(--chrome-osc); color:#fff}
+button:focus-visible{outline:3px solid var(--chrome-osc); outline-offset:2px}
+button:disabled{opacity:.35; cursor:not-allowed}
+.dia{font-size:12px; color:var(--chrome-osc); font-weight:700}
+
+.lectura{
+  margin:7px 0 0; padding:6px 10px; border-radius:6px; font-size:11.5px;
+  border:1px solid var(--hecho); background:var(--hecho-bg); color:#1d5636;
+  min-height:46px;   /* altura estable: el iframe no da saltos al avanzar */
+}
+.modelo{
+  margin:6px 0 0; font-size:10px; color:var(--gris); line-height:1.35;
+  border-left:3px solid var(--chrome-linea); padding-left:7px;
+}
+
+@media (max-width:700px){
+  .tableros{gap:7px}
+  .tablero{padding:5px}
+  .col h3{font-size:8.5px}
+  .tarjeta{font-size:8.5px}
+  .marcador b{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<h1>¿Empezar muchas cosas a la vez hace que se terminen antes?</h1>
+<p class="sub">Dos equipos iguales: mismas 6 tarjetas, mismo esfuerzo por día. Solo cambia el límite WIP.</p>
+
+<div class="tableros">
+  <div class="tablero" id="tabA">
+    <h2>Sin límite WIP</h2>
+    <div class="cols">
+      <div class="col"><h3>Por hacer</h3><div class="pila" id="A-p"></div></div>
+      <div class="col"><h3>En curso</h3><div class="pila" id="A-c"></div></div>
+      <div class="col"><h3>Hecho</h3><div class="pila" id="A-h"></div></div>
+    </div>
+    <div class="marcador">
+      <span class="ok">Terminadas<b id="A-nh">0</b></span>
+      <span class="med">A medias<b id="A-nc">0</b></span>
+    </div>
+  </div>
+
+  <div class="tablero limitado" id="tabB">
+    <h2>Con límite WIP = 2</h2>
+    <div class="cols">
+      <div class="col"><h3>Por hacer</h3><div class="pila" id="B-p"></div></div>
+      <div class="col"><h3>En curso</h3><div class="pila" id="B-c"></div></div>
+      <div class="col"><h3>Hecho</h3><div class="pila" id="B-h"></div></div>
+    </div>
+    <div class="marcador">
+      <span class="ok">Terminadas<b id="B-nh">0</b></span>
+      <span class="med">A medias<b id="B-nc">0</b></span>
+    </div>
+  </div>
+</div>
+
+<div class="ctrl">
+  <button type="button" id="avanzar">Avanzar un día ▸</button>
+  <button type="button" class="sec" id="reset">Reiniciar</button>
+  <span class="dia" id="dia">Día 0</span>
+</div>
+
+<p class="lectura" id="lectura" role="status" aria-live="polite"></p>
+
+<p class="modelo">
+  <b>Modelo simplificado:</b> el equipo reparte el mismo esfuerzo (6 puntos al día) entre todo lo
+  que tenga empezado, y cada tarjeta cuesta 3 puntos. Es una ilustración, no una demostración:
+  en la realidad, además, cambiar de tarea todo el rato cuesta tiempo, así que la diferencia
+  todavía es mayor.
+</p>
+
+<script>
+(function(){
+  "use strict";
+  var N = 6;          // tarjetas
+  var COSTE = 3;      // puntos de esfuerzo que cuesta cada tarjeta
+  var ESFUERZO = 6;   // puntos que el equipo hace cada día
+  var WIP_B = 2;      // límite de trabajo en curso del segundo tablero
+  var DIAS_MAX = 3;   // con estos números todo acaba el día 3 en los dos tableros
+
+  var NOMBRES = ["Diseñar","Materiales","Montar","Programar","Probar","Documentar"];
+
+  function nuevoTablero(limite){
+    var t = {limite:limite, c:[]}, i;
+    for(i=0;i<N;i++){ t.c.push({n:NOMBRES[i], hecho:0, est:"p"}); }
+    return t;
+  }
+  var A, B, dia;
+
+  function cuenta(t, est){
+    var k = 0, i;
+    for(i=0;i<t.c.length;i++){ if(t.c[i].est === est){ k++; } }
+    return k;
+  }
+
+  function avanzaDia(t){
+    /* 1 · se tira de tarjetas nuevas hasta el límite (al empezar el día) */
+    var libres = (t.limite === null) ? N : (t.limite - cuenta(t,"c"));
+    var i;
+    for(i=0;i<t.c.length && libres>0;i++){
+      if(t.c[i].est === "p"){ t.c[i].est = "c"; libres--; }
+    }
+    /* 2 · el esfuerzo del día se reparte a partes iguales entre lo que está en curso */
+    var resto = ESFUERZO, vueltas = 0;
+    while(resto > 1e-9 && vueltas < 20){
+      vueltas++;
+      var act = [];
+      for(i=0;i<t.c.length;i++){ if(t.c[i].est === "c"){ act.push(t.c[i]); } }
+      if(act.length === 0){ break; }
+      var cuota = resto / act.length, dado = 0;
+      for(i=0;i<act.length;i++){
+        var d = Math.min(cuota, COSTE - act[i].hecho);
+        act[i].hecho += d; dado += d;
+        if(act[i].hecho >= COSTE - 1e-9){ act[i].hecho = COSTE; act[i].est = "h"; }
+      }
+      if(dado < 1e-9){ break; }
+      resto -= dado;
+    }
+  }
+
+  function chip(c){
+    var pct = Math.round(c.hecho / COSTE * 100);
+    var cls = c.est === "h" ? "tarjeta hecho" : (c.est === "c" ? "tarjeta curso" : "tarjeta");
+    var txt = c.est === "h" ? "hecha" : (c.est === "c" ? pct + "%" : "0%");
+    return '<div class="' + cls + '"><span class="n"><span>' + c.n + '</span><b>' + txt + '</b></span>' +
+           '<div class="bar"><i style="width:' + pct + '%"></i></div></div>';
+  }
+
+  function pintaTablero(t, id){
+    var h = {p:"", c:"", h:""}, i;
+    for(i=0;i<t.c.length;i++){ h[t.c[i].est] += chip(t.c[i]); }
+    document.getElementById(id+"-p").innerHTML = h.p;
+    document.getElementById(id+"-c").innerHTML = h.c;
+    document.getElementById(id+"-h").innerHTML = h.h;
+    document.getElementById(id+"-nh").textContent = cuenta(t,"h");
+    document.getElementById(id+"-nc").textContent = cuenta(t,"c");
+  }
+
+  function pinta(){
+    pintaTablero(A, "A");
+    pintaTablero(B, "B");
+    document.getElementById("dia").textContent = "Día " + dia;
+    document.getElementById("avanzar").disabled = (dia >= DIAS_MAX);
+
+    var ha = cuenta(A,"h"), ca = cuenta(A,"c");
+    var hb = cuenta(B,"h");
+    var msg;
+    if(dia === 0){
+      msg = "Los dos equipos tienen las mismas 6 tarjetas y el mismo esfuerzo. Pulsa «Avanzar un día».";
+    } else if(dia < DIAS_MAX){
+      msg = "Día " + dia + ": el tablero sin límite lleva " + ha + " tarjetas terminadas y "
+          + ca + " a medias; el de la derecha lleva " + hb + " terminadas y ninguna a medias.";
+    } else {
+      msg = "Día " + dia + ": los dos acaban las 6 tarjetas el mismo día. Lo que cambia es CUÁNDO. "
+          + "Sin límite WIP no se terminó nada hasta el último día; con límite WIP hubo tarjetas "
+          + "acabadas desde el día 1 y nunca nada a medias.";
+    }
+    document.getElementById("lectura").textContent = msg;
+  }
+
+  function reiniciar(){
+    A = nuevoTablero(null);
+    B = nuevoTablero(WIP_B);
+    dia = 0;
+    pinta();
+  }
+
+  document.getElementById("avanzar").onclick = function(){
+    if(dia >= DIAS_MAX){ return; }
+    dia++; avanzaDia(A); avanzaDia(B); pinta();
+  };
+  document.getElementById("reset").onclick = reiniciar;
+
+  reiniciar();
+})();
+</script>
+</body>
+</html>

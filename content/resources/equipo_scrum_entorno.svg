@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 500" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="El equipo Scrum y su entorno: el cliente marca prioridades al Product Owner; las personas desarrolladoras entregan valor al usuario.">
+  <defs>
+    <marker id="flecha" markerWidth="4" markerHeight="4" refX="2.6" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L4,2 L0,4 Z" fill="#cc2a2a"/>
+    </marker>
+  </defs>
+
+  <!-- Contenedor Equipo Scrum -->
+  <rect x="300" y="70" width="440" height="380" rx="26" fill="#453f93"/>
+  <text x="520" y="118" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="bold" letter-spacing="1">EQUIPO SCRUM</text>
+
+  <!-- Product Owner -->
+  <rect x="330" y="150" width="180" height="98" rx="14" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="420" y="194" text-anchor="middle" fill="#1d2444" font-size="18" font-weight="bold">PRODUCT</text>
+  <text x="420" y="217" text-anchor="middle" fill="#1d2444" font-size="18" font-weight="bold">OWNER</text>
+
+  <!-- Scrum Master -->
+  <rect x="530" y="150" width="180" height="98" rx="14" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="620" y="194" text-anchor="middle" fill="#1d2444" font-size="18" font-weight="bold">SCRUM</text>
+  <text x="620" y="217" text-anchor="middle" fill="#1d2444" font-size="18" font-weight="bold">MASTER</text>
+
+  <!-- Development Team -->
+  <rect x="330" y="272" width="380" height="120" rx="14" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="520" y="322" text-anchor="middle" fill="#1d2444" font-size="20" font-weight="bold">DESARROLLADORES</text>
+  <text x="520" y="350" text-anchor="middle" fill="#3a3f66" font-size="15">(todo el equipo construye)</text>
+
+  <!-- Cliente -->
+  <rect x="40" y="208" width="168" height="104" rx="18" fill="#4f8f43" stroke="#3c6e33" stroke-width="2"/>
+  <text x="124" y="266" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="bold">CLIENTE</text>
+
+  <!-- Usuario -->
+  <rect x="832" y="208" width="168" height="104" rx="18" fill="#d2722a" stroke="#a85718" stroke-width="2"/>
+  <text x="916" y="266" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="bold">USUARIO</text>
+
+  <!-- Flecha Cliente -> Product Owner -->
+  <path d="M210,236 Q268,158 326,190" fill="none" stroke="#cc2a2a" stroke-width="13" stroke-linecap="round" marker-end="url(#flecha)"/>
+  <text x="150" y="158" text-anchor="middle" fill="#7a1d1d" font-size="15" font-weight="bold">prioridades</text>
+
+  <!-- Flecha Development Team -> Usuario -->
+  <path d="M712,344 Q806,430 836,300" fill="none" stroke="#cc2a2a" stroke-width="13" stroke-linecap="round" marker-end="url(#flecha)"/>
+  <text x="884" y="404" text-anchor="middle" fill="#7a1d1d" font-size="15" font-weight="bold">producto que</text>
+  <text x="884" y="424" text-anchor="middle" fill="#7a1d1d" font-size="15" font-weight="bold">funciona</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 430" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Ciclo de un sprint: del product backlog, la planificación produce el sprint backlog; durante el sprint, con reuniones diarias, se construye el incremento; al final, revisión y retrospectiva, y el backlog se actualiza para el siguiente sprint.">
+  <defs>
+    <marker id="f3" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#453f93"/>
+    </marker>
+    <marker id="f3r" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc2a2a"/>
+    </marker>
+  </defs>
+
+  <!-- Flecha de retorno (iteración) -->
+  <path d="M1055,232 C1055,70 1055,58 900,58 L240,58 C150,58 130,58 130,150" fill="none" stroke="#cc2a2a" stroke-width="6" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#f3r)"/>
+  <text x="585" y="46" text-anchor="middle" fill="#cc2a2a" font-size="15" font-weight="bold">el product backlog se actualiza · siguiente sprint</text>
+
+  <!-- Product backlog -->
+  <rect x="40" y="196" width="170" height="92" rx="12" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M40,208 a12,12 0 0 1 12,-12 h146 a12,12 0 0 1 12,12 v22 h-170 z" fill="#453f93"/>
+  <text x="125" y="225" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">PRODUCT BACKLOG</text>
+  <rect x="58" y="242" width="134" height="11" rx="3" fill="#9c98cf"/>
+  <rect x="58" y="259" width="134" height="11" rx="3" fill="#c2bfe2"/>
+
+  <!-- Planificación -->
+  <rect x="246" y="214" width="132" height="56" rx="28" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="312" y="248" text-anchor="middle" fill="#1d2444" font-size="15" font-weight="bold">Planificación</text>
+
+  <!-- Sprint backlog -->
+  <rect x="408" y="214" width="132" height="56" rx="28" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="474" y="243" text-anchor="middle" fill="#1d2444" font-size="14" font-weight="bold">Sprint</text>
+  <text x="474" y="260" text-anchor="middle" fill="#1d2444" font-size="14" font-weight="bold">backlog</text>
+
+  <!-- SPRINT (centro) -->
+  <circle cx="640" cy="242" r="86" fill="#453f93"/>
+  <text x="640" y="232" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">SPRINT</text>
+  <text x="640" y="256" text-anchor="middle" fill="#dcdaf0" font-size="14">1–4 semanas</text>
+  <rect x="576" y="286" width="128" height="30" rx="15" fill="#ffffff" stroke="#453f93" stroke-width="2"/>
+  <text x="640" y="306" text-anchor="middle" fill="#453f93" font-size="13" font-weight="bold">reunión diaria</text>
+
+  <!-- Incremento -->
+  <rect x="748" y="214" width="120" height="56" rx="28" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="808" y="248" text-anchor="middle" fill="#1d2444" font-size="15" font-weight="bold">Incremento</text>
+
+  <!-- Revisión -->
+  <rect x="898" y="214" width="112" height="56" rx="28" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="954" y="248" text-anchor="middle" fill="#1d2444" font-size="15" font-weight="bold">Revisión</text>
+
+  <!-- Retrospectiva -->
+  <rect x="1006" y="312" width="118" height="56" rx="28" fill="#d6dbf2" stroke="#322d6e" stroke-width="2"/>
+  <text x="1065" y="340" text-anchor="middle" fill="#1d2444" font-size="13.5" font-weight="bold">Retro-</text>
+  <text x="1065" y="356" text-anchor="middle" fill="#1d2444" font-size="13.5" font-weight="bold">spectiva</text>
+
+  <!-- Flechas del flujo -->
+  <path d="M214,242 L242,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+  <path d="M380,242 L404,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+  <path d="M542,242 L550,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+  <path d="M728,242 L744,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+  <path d="M1012,242 L1040,242 Q1065,242 1065,290 L1065,308" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+</svg>

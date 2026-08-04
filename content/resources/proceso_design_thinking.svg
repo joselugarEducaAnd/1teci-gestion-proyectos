@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 340" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Las cinco fases del Design Thinking en orden: Empatizar, Definir, Idear, Prototipar y Testear, unidas por flechas. Una flecha roja discontinua vuelve desde Testear hasta Empatizar para indicar que el proceso es iterativo y se puede repetir.">
+  <defs>
+    <marker id="dt" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#453f93"/>
+    </marker>
+    <marker id="dtr" markerWidth="5" markerHeight="5" refX="3.2" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L5,2.5 L0,5 Z" fill="#cc2a2a"/>
+    </marker>
+  </defs>
+
+  <!-- Flecha de iteración (volver atrás) -->
+  <path d="M1036,150 C1036,40 1036,40 900,40 L260,40 C124,40 124,40 124,150" fill="none" stroke="#cc2a2a" stroke-width="5" stroke-dasharray="2 7" stroke-linecap="round" marker-end="url(#dtr)"/>
+  <text x="580" y="30" text-anchor="middle" fill="#cc2a2a" font-size="16" font-weight="bold">es iterativo: se puede volver atrás y repetir</text>
+
+  <!-- Tarjetas de fase -->
+  <!-- 1 Empatizar -->
+  <rect x="30" y="150" width="188" height="150" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M30,164 a14,14 0 0 1 14,-14 h160 a14,14 0 0 1 14,14 v22 h-188 z" fill="#453f93"/>
+  <text x="124" y="180" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">1 · Empatizar</text>
+  <text x="124" y="216" text-anchor="middle" fill="#1d2444" font-size="13.5">Entender al usuario:</text>
+  <text x="124" y="236" text-anchor="middle" fill="#1d2444" font-size="13.5">observar, preguntar</text>
+  <text x="124" y="256" text-anchor="middle" fill="#1d2444" font-size="13.5">y ponerse en su lugar.</text>
+
+  <!-- 2 Definir -->
+  <rect x="258" y="150" width="188" height="150" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M258,164 a14,14 0 0 1 14,-14 h160 a14,14 0 0 1 14,14 v22 h-188 z" fill="#453f93"/>
+  <text x="352" y="180" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">2 · Definir</text>
+  <text x="352" y="216" text-anchor="middle" fill="#1d2444" font-size="13.5">Formular el problema</text>
+  <text x="352" y="236" text-anchor="middle" fill="#1d2444" font-size="13.5">real en una frase</text>
+  <text x="352" y="256" text-anchor="middle" fill="#1d2444" font-size="13.5">clara y concreta.</text>
+
+  <!-- 3 Idear -->
+  <rect x="486" y="150" width="188" height="150" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M486,164 a14,14 0 0 1 14,-14 h160 a14,14 0 0 1 14,14 v22 h-188 z" fill="#453f93"/>
+  <text x="580" y="180" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">3 · Idear</text>
+  <text x="580" y="216" text-anchor="middle" fill="#1d2444" font-size="13.5">Generar muchas</text>
+  <text x="580" y="236" text-anchor="middle" fill="#1d2444" font-size="13.5">ideas sin juzgarlas</text>
+  <text x="580" y="256" text-anchor="middle" fill="#1d2444" font-size="13.5">todavía.</text>
+
+  <!-- 4 Prototipar -->
+  <rect x="714" y="150" width="188" height="150" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M714,164 a14,14 0 0 1 14,-14 h160 a14,14 0 0 1 14,14 v22 h-188 z" fill="#453f93"/>
+  <text x="808" y="180" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">4 · Prototipar</text>
+  <text x="808" y="216" text-anchor="middle" fill="#1d2444" font-size="13.5">Convertir la idea en</text>
+  <text x="808" y="236" text-anchor="middle" fill="#1d2444" font-size="13.5">algo tangible</text>
+  <text x="808" y="256" text-anchor="middle" fill="#1d2444" font-size="13.5">y barato.</text>
+
+  <!-- 5 Testear -->
+  <rect x="942" y="150" width="188" height="150" rx="14" fill="#ffffff" stroke="#322d6e" stroke-width="2"/>
+  <path d="M942,164 a14,14 0 0 1 14,-14 h160 a14,14 0 0 1 14,14 v22 h-188 z" fill="#453f93"/>
+  <text x="1036" y="180" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">5 · Testear</text>
+  <text x="1036" y="216" text-anchor="middle" fill="#1d2444" font-size="13.5">Probar con usuarios</text>
+  <text x="1036" y="236" text-anchor="middle" fill="#1d2444" font-size="13.5">y aprender de</text>
+  <text x="1036" y="256" text-anchor="middle" fill="#1d2444" font-size="13.5">su reacción.</text>
+
+  <!-- Flechas entre fases -->
+  <path d="M218,225 L254,225" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#dt)"/>
+  <path d="M446,225 L482,225" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#dt)"/>
+  <path d="M674,225 L710,225" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#dt)"/>
+  <path d="M902,225 L938,225" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#dt)"/>
+</svg>
