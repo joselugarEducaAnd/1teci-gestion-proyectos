@@ -114,6 +114,18 @@
   box-shadow: inset 3px 0 0 0 var(--chrome);
 }
 #siteNav a.highlighted-link { color: var(--chrome); background: #fff; }
+/* Menú fijo con scroll propio (2026-08-14, DOCA-015). El checkNav() del tema
+   base mide solo el <ul> (+50px) y no cuenta el padding-top de 170px del logo
+   Majuelo: con muchas páginas fija un menú más alto que la ventana y las
+   últimas entradas quedaban inalcanzables (visto en la SdA05 de 1º TECI, 18
+   páginas). Verificado en navegador: sin esta regla la última entrada no se
+   alcanza ni scrolleando la página; con ella el menú scrollea por dentro. */
+#sidebar-nav.fixed #siteNav {
+  max-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
 @media (max-width: 767.98px) {
   .exe-web-site .exe-content {
     box-shadow: inset 251px 0 0 0 var(--chrome-tinte), inset 252px 0 0 0 var(--chrome-linea);
