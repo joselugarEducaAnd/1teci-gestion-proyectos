@@ -88,11 +88,35 @@
   border-left: 6px solid var(--chrome); padding-left: .55em; margin: .1em 0 .9em;
 }
 .exe-content h1, .exe-content h2, .exe-content h3, .exe-content h4, .exe-content h5 { color: var(--chrome); }
-.exe-content h2 {
-  font-size: 1.45rem; font-weight: 700; line-height: 1.25;
+
+/* ------------------------------------------------------------
+   ESCALA DE ENCABEZADOS DENTRO DEL BLOQUE  (2026-08-21)
+   El título del bloque es el techo: nada del CONTENIDO puede verse más grande.
+   Medido en el navegador, no supuesto —esto se falló dos veces por suponerlo—:
+     · `.exe-content .box-title` del tema base dice 1,5rem, PERO gana `base.css` con
+       `.exe-content .box-head .box-title { font-size: 1.2em }` (más específico): el título
+       de bloque salía a 19,2 px y encima con peso 500.
+     · el `<h1>` del contenido no tenía regla en este tema y caía en el 2rem del navegador.
+   Resultado: una subsección se veía más grande y más gruesa que el bloque que la contiene.
+   El tema toma ahora el control del título de bloque (con la misma especificidad que
+   `base.css`, por eso el selector lleva `.box-head`) y fija la escala completa:
+     page-title 1,90 > box-title 1,55 > h1 1,35 > h2 1,22 > h3 1,12 > h5 1,00 > h4 0,82
+   (h4 es un antetítulo en versalitas y por eso va el último a propósito).
+   Al tocar esto, MEDIR con `getComputedStyle` en el export real, no leer el CSS.
+   ------------------------------------------------------------ */
+.exe-content .box-head .box-title,
+.exe-content .box-title {
+  font-size: 1.55rem; font-weight: 700; line-height: 1.25; color: var(--chrome);
+}
+.exe-content h1:not(.page-title):not(.box-title):not(.package-title) {
+  font-size: 1.35rem; font-weight: 700; line-height: 1.25;
   margin: 1.8em 0 .6em; padding-bottom: .28em; border-bottom: 1px solid var(--chrome-linea);
 }
-.exe-content h3 { font-size: 1.18rem; font-weight: 700; line-height: 1.3; margin: 1.5em 0 .5em; color: var(--maj-texto); }
+.exe-content h2 {
+  font-size: 1.22rem; font-weight: 700; line-height: 1.25;
+  margin: 1.8em 0 .6em; padding-bottom: .28em; border-bottom: 1px solid var(--chrome-linea);
+}
+.exe-content h3 { font-size: 1.12rem; font-weight: 700; line-height: 1.3; margin: 1.5em 0 .5em; color: var(--maj-texto); }
 .exe-content h4 { font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin: 1.4em 0 .4em; }
 .exe-content h5 { font-size: 1rem; font-weight: 700; }
 
@@ -218,6 +242,32 @@ button.toggler:hover, button.toggler:focus,
 /* Fórmula / clave — naranja */
 .exe-content .bloque-formula, .exe-content .marco-formula { --c: var(--sem-formula); --bg: var(--sem-formula-bg); --tx: var(--sem-formula-tx); }
 .exe-content .bloque-formula p, .exe-content .marco-formula p { font-size: 1.05em; }
+/* ------------------------------------------------------------
+   ANCHO DE LOS MARCOS Y FIGURAS FLOTADAS  (2026-08-21)
+   Dos síntomas con la misma raíz: un marco es un bloque normal, y un bloque
+   normal NO respeta un `float` —solo lo esquivan sus líneas de texto—.
+   1) El marco de FÓRMULA salía tan ancho como el texto: un `W = F·s` dentro de
+      una caja de 70ch parece un error de maqueta. `display: table` lo encoge a
+      su contenido.
+   2) Cualquier marco colocado junto a una figura `float-right` se metía DEBAJO
+      de la figura y quedaba tapado. `display: table` y `display: flow-root`
+      crean contexto de formato: el marco se coloca AL LADO del flotado y, si no
+      cabe, baja entero. Ninguna de las dos propiedades cambia el aspecto.
+   Los selectores repiten la forma de la regla general —clase + atributo +
+   `:not`— para igualar su especificidad y ganar por orden.
+   ------------------------------------------------------------ */
+.exe-content [class*="bloque-formula"]:not([class*="titulo"]),
+.exe-content [class*="marco-formula"]:not([class*="titulo"]) {
+  display: table;              /* se encoge a la fórmula y respeta los flotados */
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.exe-content [class*="bloque-"]:not([class*="titulo"]):not([class*="formula"]),
+.exe-content [class*="marco-"]:not([class*="titulo"]):not([class*="formula"]) {
+  display: flow-root;          /* ancho de lectura, pero sin meterse bajo la figura */
+}
 /* DUA · ampliación / refuerzo — ciruela */
 .exe-content .bloque-dua { --c: var(--sem-dua); --bg: var(--sem-dua-bg); --tx: var(--sem-dua-tx); }
 /* Nota / aviso — verde */
