@@ -169,8 +169,34 @@
 .nav-buttons a:hover, .nav-buttons a:focus,
 button.toggler:hover, button.toggler:focus,
 #exe-client-search-submit:hover, #exe-client-search-submit:focus { background-color: var(--chrome-osc); }
-.exe-content .btn-primary { background-color: var(--chrome); border-color: var(--chrome-osc); }
-.exe-content .btn-primary:hover, .exe-content .btn-primary:focus { background-color: var(--chrome-osc); border-color: var(--chrome-osc); }
+/* ------------------------------------------------------------
+   BOTONES DE DESCARGA DEL CONTENIDO  (2026-08-27, DOCA-052)
+   El tema fijaba el FONDO de `.btn-primary` pero no el color del texto, y
+   `.exe-content a { color: var(--chrome) }` (clase + elemento) gana por
+   especificidad al `color:#fff` de Bootstrap (clase sola). Resultado medido con
+   getComputedStyle en el export real: texto #3a2f6b sobre fondo #3d6694, es
+   decir 1,96:1 — WCAG AA pide 4,5:1. El botón se leía a duras penas.
+   `.btn-outline-primary` no estaba contemplado y salía con el azul de Bootstrap
+   (#0d6efd), ajeno al chrome de la unidad.
+   El blanco es seguro en los SIETE chromes en uso: el más claro (#817431) da
+   4,69:1 y el más oscuro (#22425c) 10,49:1. Medido sobre los 26 .elpx, no supuesto.
+   `text-decoration:none` porque un botón no se subraya: el subrayado venía de
+   la regla de enlaces de arriba.
+   ------------------------------------------------------------ */
+.exe-content .btn-primary {
+  background-color: var(--chrome); border-color: var(--chrome-osc);
+  color: #fff; text-decoration: none;
+}
+.exe-content .btn-primary:hover, .exe-content .btn-primary:focus,
+.exe-content .btn-primary:visited {
+  background-color: var(--chrome-osc); border-color: var(--chrome-osc); color: #fff;
+}
+.exe-content .btn-outline-primary {
+  color: var(--chrome); border-color: var(--chrome); text-decoration: none;
+}
+.exe-content .btn-outline-primary:hover, .exe-content .btn-outline-primary:focus {
+  background-color: var(--chrome); border-color: var(--chrome); color: #fff;
+}
 #teacher-mode-toggler.form-check-input:checked { background-color: var(--chrome); border-color: var(--chrome); }
 .exe-content .box-title { color: var(--chrome); }
 .exe-export .box .box-content { border-color: var(--chrome-linea); border-radius: var(--blk-radio); }
@@ -229,7 +255,13 @@ button.toggler:hover, button.toggler:focus,
 .exe-content .marco-titulo::before {
   content: ""; flex: 0 0 auto; width: .62em; height: .62em; border-radius: 50%; background: var(--c);
 }
-.exe-content [class*="bloque-"] a, .exe-content [class*="marco-"] a { color: var(--tx); }
+/* Los enlaces DE TEXTO dentro de un marco toman el color del marco. Los BOTONES
+   no: llevan su propio fondo y necesitan su propio color de texto. Sin el
+   `:not(.btn)` esta regla (0,2,1) le ganaba a `.exe-content .btn-primary`
+   (0,2,0) y pintaba el texto del botón del color del marco sobre el fondo del
+   chrome — 1,96:1 medido en el export. (2026-08-27, DOCA-052) */
+.exe-content [class*="bloque-"] a:not(.btn),
+.exe-content [class*="marco-"] a:not(.btn) { color: var(--tx); }
 
 /* Teoría — morado */
 .exe-content .bloque-teoria, .exe-content .marco-teoria { --c: var(--sem-teoria); --bg: var(--sem-teoria-bg); --tx: var(--sem-teoria-tx); }
