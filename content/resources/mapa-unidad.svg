@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 682" width="1000" height="682" role="img" aria-label="Mapa de la unidad: las nueve sesiones agrupadas en entender el problema, planificar el tiempo, organizar el trabajo y comunicarlo, y las nueve piezas que quedan en el plan de proyecto">
-<style>text{font-family:Verdana, 'DejaVu Sans', Arial, sans-serif;fill:#222222}</style>
+<style>text{font-family:Verdana, 'DejaVu Sans', Arial, sans-serif}text:not([fill]){fill:#222222}</style>
 <rect width="1000" height="682" fill="#ffffff"/>
 <text x="500.0" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#3b3a7a">Gestión y desarrollo de proyectos: el mapa de la unidad</text>
 <text x="500.0" y="62" text-anchor="middle" font-size="13" fill="#6b6b6b">Del problema al plan, en nueve sesiones</text>

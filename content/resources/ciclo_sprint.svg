@@ -9,7 +9,7 @@
   </defs>
 
   <!-- Flecha de retorno (iteración) -->
-  <path d="M1055,232 C1055,70 1055,58 900,58 L240,58 C150,58 130,58 130,150" fill="none" stroke="#cc2a2a" stroke-width="6" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#f3r)"/>
+  <path d="M1127,340 Q1134,340 1134,322 L1134,96 Q1134,58 1096,58 L240,58 C150,58 130,58 130,150" fill="none" stroke="#cc2a2a" stroke-width="6" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#f3r)"/>
   <text x="585" y="46" text-anchor="middle" fill="#cc2a2a" font-size="15" font-weight="bold">el product backlog se actualiza · siguiente sprint</text>
 
   <!-- Product backlog -->
@@ -53,5 +53,6 @@
   <path d="M380,242 L404,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
   <path d="M542,242 L550,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
   <path d="M728,242 L744,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
+  <path d="M870,242 L894,242" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
   <path d="M1012,242 L1040,242 Q1065,242 1065,290 L1065,308" fill="none" stroke="#453f93" stroke-width="5" marker-end="url(#f3)"/>
 </svg>
