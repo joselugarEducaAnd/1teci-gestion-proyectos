@@ -145,6 +145,12 @@ button:disabled{opacity:.35; cursor:not-allowed}
   .lectura{font-size:11px}
   .ayuda{font-size:10px}
 }
+@media (max-width:480px){  /* móvil: la etiqueta encima y la barra a todo el ancho */
+  .fila{flex-wrap:wrap}
+  .etq{flex:0 0 100%; padding:3px 0 0}
+  .cab .etq{text-align:left}
+  .pista{flex:1 1 100%}
+}
 </style>
 </head>
 <body>
@@ -414,5 +420,7 @@ button:disabled{opacity:.35; cursor:not-allowed}
   pinta();
 })();
 </script>
+<script>/* El iframe se ajusta a la altura del contenido (misma procedencia; si no, se queda como estaba). */
+(function(){function fit(){try{var f=window.frameElement;if(!f)return;var b=document.body,cs=getComputedStyle(b);var h=Math.ceil(b.getBoundingClientRect().height+parseFloat(cs.marginTop)+parseFloat(cs.marginBottom))+2;if(Math.abs(f.clientHeight-h)>2){f.style.height=h+'px';}}catch(e){}}window.addEventListener('load',fit);window.addEventListener('resize',fit);if(window.ResizeObserver){new ResizeObserver(fit).observe(document.body);}setTimeout(fit,400);})();</script>
 </body>
 </html>
